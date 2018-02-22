@@ -371,13 +371,13 @@ contract IrisTokenSale is Ownable, Pausable {
   event SaleClosed();
 
  function IrisTokenSale() public {
-    presaleStart = 1521426600;
+    presaleStart = 1519284600; // 8.30
     // 1521426600 converts to Monday March 19, 2018 10:30:00 (am) in time zone Asia/Singapore (+08)
-    presaleEnd = 1522044000;
+    presaleEnd = 1519286400; // 9.00
     // 1522044000 converts to Monday March 26, 2018 14:00:00 (pm) in time zone Asia/Singapore (+08)
-    publicsaleStart = 1522895400;
+    publicsaleStart = 1519288200; // 9.30
     // 1522895400 converts to Thursday April 05, 2018 10:30:00 (am) in time zone Asia/Singapore (+08)
-    publicsaleEnd = 1523512800;
+    publicsaleEnd = 1519290000; // 10.00
     // 1523512800 converts to Thursday April 12, 2018 14:00:00 (pm) in time zone Asia/Singapore (+08)
     
 
@@ -517,7 +517,7 @@ contract IrisTokenSale is Ownable, Pausable {
     require(msg.value >= minContribution);
     require(msg.value <= maxContribution);
 
-    // Calculate token amount to be purchased    
+    // Calculate token amount to be purchased        
     uint256 tokens = amount.mul(rate);
 
     // update state
